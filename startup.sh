@@ -19,7 +19,7 @@ if [ ! -f "$FLAG_FILE" ]; then
     sed -i "s|_IS_HTTPS_|$IS_HTTPS|g" `grep _IS_HTTPS_ -l /$XXD_CONFIG`
     sed -i "s|_UPLOAD_PATH_|$UPLOAD_PATH|g" `grep _UPLOAD_PATH_ -l /$XXD_CONFIG`
     sed -i "s|_UPLOAD_FILE_SIZE_|$UPLOAD_FILE_SIZE|g" `grep _UPLOAD_FILE_SIZE_ -l /$XXD_CONFIG`
-    sed -i "s|_RANZHI_ADDRESS_|$RANZHI_ADDRESS:$RANZHI_PORT/xuanxuan.php,$XUANXUAN_TOKEN,default|g" `grep _RANZHI_ADDRESS_ -l /$XXD_CONFIG`
+    sed -i "s|_RANZHI_URL_|$RANZHI_ADDRESS:$RANZHI_PORT/xuanxuan.php,$XUANXUAN_TOKEN,default|g" `grep _RANZHI_ADDRESS_ -l /$XXD_CONFIG`
     sed -i "s|_LOG_PATH_|$LOG_PATH|g" `grep _LOG_PATH_ -l /$XXD_CONFIG`
     sed -i "s|_CERT_PATH_|$CERT_PATH|g" `grep _CERT_PATH_ -l /$XXD_CONFIG`
     echo $FLAG_INFO > $FLAG_FILE
