@@ -15,7 +15,7 @@ services:
       - COMMON_PORT=11443
       - IS_HTTPS=NO
       - UPLOAD_PATH=tmpfile/
-      - UPLOAD_SIZE=32M
+      - UPLOAD_FILE_SIZE=32M
       - RANZHI_ADDRESS=http://127.0.0.1
       - RANZHI_PORT=80
       - XUANXUAN_TOKEN=122d973a907ce1a455450386478ca17a
