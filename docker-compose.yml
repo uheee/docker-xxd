@@ -1,0 +1,23 @@
+version: '2'
+services:
+  xxd:
+    image: 'snowind/xxd:latest'
+    container_name: xxd
+    restart: always
+    ports:
+      - "11444:11444"
+      - "11443:11443"
+    volumes:
+      - "/home/xxd:/var/xxd"
+    environment:
+      - LISTEN_IP=127.0.0.1
+      - CHAT_PORT=11444
+      - COMMON_PORT=11443
+      - IS_HTTPS=NO
+      - UPLOAD_PATH=tmpfile/
+      - UPLOAD_SIZE=32M
+      - RANZHI_ADDRESS=http://127.0.0.1
+      - RANZHI_PORT=80
+      - XUANXUAN_TOKEN=122d973a907ce1a455450386478ca17a
+      - LOG_PATH=log/
+      - CERT_PATH=cert/
