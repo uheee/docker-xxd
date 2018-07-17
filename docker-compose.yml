@@ -10,10 +10,9 @@ services:
     volumes:
       - "/home/xxd:/var/xxd"
     environment:
-      - LISTEN_IP=127.0.0.1
       - CHAT_PORT=11444
       - COMMON_PORT=11443
-      - IS_HTTPS=NO
+      - IS_HTTPS=1
       - UPLOAD_PATH=tmpfile/
       - UPLOAD_FILE_SIZE=32M
       - RANZHI_ADDRESS=http://127.0.0.1

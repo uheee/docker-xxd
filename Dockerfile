@@ -4,7 +4,7 @@ LABEL maintainer="Snowind <jinks.tao@gmail.com" \
 
 ARG XXD_URL=http://dl.cnezsoft.com/xuanxuan/1.6/xxd.1.6.0.linux.x64.tar.gz
 
-ENV LISTEN_IP=127.0.0.1
+ENV LISTEN_IP=0.0.0.0
 ENV CHAT_PORT=11444
 ENV COMMON_PORT=11443
 ENV IS_HTTPS=NO
@@ -14,7 +14,7 @@ ENV RANZHI_ADDRESS=http://127.0.0.1
 ENV RANZHI_PORT=80
 ENV XUANXUAN_TOKEN=88888888888888888888888888888888
 ENV LOG_PATH=log/
-ENV CERT_PATH=cert/
+ENV CERT_PATH=certificate/
 
 RUN apt-get update && \
     apt-get upgrade -y && \
@@ -28,4 +28,5 @@ COPY xxd.conf /tmp/
 COPY startup.sh /usr/sbin/
 RUN chmod +x /usr/sbin/startup.sh
 
+WORKDIR /var/xxd
 ENTRYPOINT [ "/usr/sbin/startup.sh" ]
